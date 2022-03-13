@@ -1,0 +1,35 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
+}
+
+model Post {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  title    String
+  content  String
+  comments Comment[]
+  deleted Boolean
+}
+
+model Comment {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  post    Post   @relation(fields: [postId], references: [id])
+  postId  String @db.ObjectId
+  content String
+  replies Reply[]
+  deleted Boolean
+}
+
+model Reply {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  commentId String @db.ObjectId
+  comment Comment @relation(fields: [commentId], references: [id])
+  content String
+  ReplyTo Int?
+  deleted Boolean
+}

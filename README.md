@@ -1,3 +1,13 @@
+<!--
+ * @Author: vecpeng
+ * @Date: 2022-03-12 22:23:40
+ * @LastEditors: vecpeng
+ * @LastEditTime: 2022-03-14 00:34:57
+ * @FilePath: /gql-demo/README.md
+ * @Desc: 
+ * 
+ * Copyright (c) 2022 by vecpeng, All Rights Reserved. 
+-->
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -24,7 +34,6 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
 

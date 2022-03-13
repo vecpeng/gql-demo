@@ -1,0 +1,24 @@
+type Reply {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateReplyInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateReplyInput {
+  id: String!
+}
+
+type Query {
+  replies: [Reply]!
+  reply(id: String!): Reply
+}
+
+type Mutation {
+  createReply(createReplyInput: CreateReplyInput!): Reply!
+  updateReply(updateReplyInput: UpdateReplyInput!): Reply!
+  removeReply(id: String!): Reply
+}

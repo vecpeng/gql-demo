@@ -2,18 +2,19 @@
  * @Author: vecpeng
  * @Date: 2022-03-13 13:04:24
  * @LastEditors: vecpeng
- * @LastEditTime: 2022-03-13 13:04:24
+ * @LastEditTime: 2022-03-13 16:07:20
  * @FilePath: /gql-demo/src/app.resolver.ts
- * @Desc: 
- * 
- * Copyright (c) 2022 by vecpeng, All Rights Reserved. 
+ * @Desc:
+ *
+ * Copyright (c) 2022 by vecpeng, All Rights Reserved.
  */
-import { resolver, Query } from '@nestjs/graphql';
-
+import { Resolver, Query } from '@nestjs/graphql';
+import { AppService } from './app.service';
 @Resolver()
 export class AppResolver {
+  constructor(private appService: AppService) {}
   @Query(() => String)
-  getHello() {
-    return 'Hello World!';
+  hello() {
+    return this.appService.getHello();
   }
 }

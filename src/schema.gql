@@ -1,0 +1,24 @@
+type Post {
+    id: String!
+    title: String!
+    content: String!
+    createdAt: Date!
+    updatedAt: Date!
+    comments: [Comment]
+}
+
+type Comment {
+    id: String!
+    content: String!
+    replies: [Reply]
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type Reply {
+    id: String!
+    content: String!
+    replyTo: String!
+    createdAt: Date!
+    updatedAt: Date!
+}
