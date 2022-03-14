@@ -1,4 +1,3 @@
-
 /*
  * -------------------------------------------------------
  * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
@@ -16,7 +15,6 @@ export class UpdateCommentInput {
 }
 
 export class CreatePostInput {
-    id: string;
     title: string;
     content: string;
 }
